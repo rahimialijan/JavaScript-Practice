@@ -41,18 +41,45 @@ function divide(){
 
 /*third example srcipt codes*/
 
-let Count=document.querySelector('#count');
-let adding=document.querySelector('.add');
-let subtracting=document.querySelector('.subtract');
-let reseting=document.querySelector('.reset');
 
-adding.addEventListener('click',()=>{
-    Count.innerHTML++
+// let adding=document.querySelector('.add');
+// let subtracting=document.querySelector('.subtract');
+// let reseting=document.querySelector('.reset');
+const Counting=document.querySelector('#count');
+const allBTN=document.querySelector('.all-btn');
+
+allBTN.addEventListener( "click", (e) =>{
+    if (e.target.classList.contains("add")){
+        Counting.textContent++;
+        changeColor()
+    };
+    if (e.target.classList.contains("reset")){
+        Counting.textContent=0;
+        changeColor()
+    };
+    if (e.target.classList.contains("subtract")){
+        Counting.textContent--;
+        changeColor()
+    };
 })
-subtracting.addEventListener('click',()=>{
-    Count.innerHTML--
-})
-reseting.addEventListener('click',()=>{
-    Count.innerHTML=0
-})
+
+function changeColor(){
+    if (Counting.textContent>0){
+        Counting.style.color="yellow"
+    }else if(Counting.textContent<0){
+        Counting.style.color="red"
+    }else{
+        Counting.style.color="#fff"
+    }
+}
+
+// adding.addEventListener('click',()=>{
+//     Count.innerHTML++
+// })
+// subtracting.addEventListener('click',()=>{
+//     Count.innerHTML--
+// })
+// reseting.addEventListener('click',()=>{
+//     Count.innerHTML=0
+// })
 
