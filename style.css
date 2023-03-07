@@ -1,0 +1,77 @@
+/*counter page style*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.section1{
+    display: flex;
+    flex-direction: column;
+    background: #5959f027;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h1{
+    font-size: 60px;
+    font-weight: 900;
+    padding-bottom: 10px;
+}
+h2{
+    font-size: 50px;
+    font-weight: 800;
+    padding: 20px 0;
+}
+#increase-btn{
+    padding: 20px 50px;
+    background: rgb(97, 11, 25);
+    color: #fff;
+    font-size: 24px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+}
+#save-btn{
+    padding: 20px 50px;
+    background: rgb(2, 80, 35);
+    color: #fff;
+    font-size: 24px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+
+
+.section2{
+    display: flex;
+    flex-direction: column;
+    background: #5de17e27;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.btns{
+    margin: 20px 0;
+}
+.btns button{
+    padding: 12px 30px;
+    background: rgb(97, 11, 25);
+    color: #fff;
+    font-size: 15px;
+    border-radius: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.numbers{
+    display: flex;
+}
+.numbers p{
+    font-size: 20px;
+    padding: 20px;
+}
+.section2 p{
+    font-size: 30px;
+}
