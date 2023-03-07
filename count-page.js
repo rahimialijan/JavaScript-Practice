@@ -36,3 +36,23 @@ function divide(){
     let calc=num1/num2;
     rst.textContent= "divide: "+calc;
 }
+
+
+
+/*third example srcipt codes*/
+
+let Count=document.querySelector('#count');
+let adding=document.querySelector('.add');
+let subtracting=document.querySelector('.subtract');
+let reseting=document.querySelector('.reset');
+
+adding.addEventListener('click',()=>{
+    Count.innerHTML++
+})
+subtracting.addEventListener('click',()=>{
+    Count.innerHTML--
+})
+reseting.addEventListener('click',()=>{
+    Count.innerHTML=0
+})
+
