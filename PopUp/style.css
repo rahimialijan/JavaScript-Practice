@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(58, 5, 108);
+    height: 100vh;
+    z-index: 10;
+}
+header >*{
+    margin-bottom: 14px;
+    color: white;
+}
+header h1{
+    font-size: 40px;
+    font-weight: 200;
+    margin-top: 100px;
+}
+h1 span{
+    font-weight: 900;
+}
+header p{
+    font-size: 20px;
+    font-weight: 400;
+}
+#popup-btn{
+    padding: 12px 30px;
+    background: rgb(97, 11, 25);
+    color: #fff;
+    font-size: 15px;
+    border-radius: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+
+}
+.container{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    top: -100px;
+    left: 0;
+    margin: 15% 30%;
+    padding: 10px;
+    animation:slide ease 0.5s;  
+}
+@keyframes slide{
+    0%{
+        transform: translateY(-200px);
+    }100%{
+        transform: translateY(0);
+    }
+}
+.container p{
+    text-align: justify;
+    font-size: 13px;
+}
+.container h2{
+    font-size: 24px;
+    font-weight: 700;
+}
+.close{
+    transform: translateX(210px);
+    font-size: 20px;
+    cursor: pointer;
+}
