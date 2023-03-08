@@ -83,3 +83,14 @@ function changeColor(){
 //     Count.innerHTML=0
 // })
 
+/*4th example srcipt codes for rendem number*/
+
+const numGen=document.querySelector(".rendem-num");
+const BTNs=document.querySelector(".genrate");
+
+const genrateNums=function rendNum(){
+const rendemNum=Math.floor(Math.random()*10+1);
+numGen.innerHTML=rendemNum;
+}
+BTNs.addEventListener('click', genrateNums);
+genrateNums()
