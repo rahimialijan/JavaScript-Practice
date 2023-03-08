@@ -94,3 +94,18 @@ numGen.innerHTML=rendemNum;
 }
 BTNs.addEventListener('click', genrateNums);
 genrateNums()
+
+
+/*5th example srcipt codes for random color*/
+
+const colorGen=document.querySelector('.random-col');
+const colorbtn=document.querySelector('.genrate-col');
+const bgcolor=document.querySelector('.section4');
+
+function colorGenrator(){
+    const randomColor=Math.random().toString().substring(2,8);
+    colorGen.innerText="#"+randomColor;
+    bgcolor.style.backgroundColor="#"+randomColor;
+};
+colorbtn.addEventListener("click", colorGenrator);
+colorGenrator()
