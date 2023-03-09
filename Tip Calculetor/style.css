@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(46, 46, 150);
+    height: 100vh;
+}
+
+.calc{
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+    width:40rem;
+    border-radius: 8px;
+    height: 90vh;
+    justify-content: center;
+    text-align: center;
+}
+.calc h2{
+    font-size: 4rem;
+    background-color: rgb(240, 152, 45);
+    color: white;
+    padding: 1rem;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    margin-top: 0;
+}
+form, 
+form >*{
+    width: 90%;
+    border-bottom: 2px solid rgb(86, 29, 48);
+    text-align: center;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+    font-size: 1.5rem ;
+}
+form div{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+input,
+select{
+    text-align: right;
+    font-size: 1.6rem;
+    padding: 7px;
+    width: 20rem;
+}
+.btn{
+    margin: 5px 0;
+    background-color: rgb(86, 29, 48);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    outline: none;
+    border-radius: 3px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(240, 152, 45) ;
+}
+.error{
+    display: none;
+    color: red;
+}
+.result{
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.result >*{
+    background-color: rgb(236, 236, 236);
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: left;
+}
