@@ -68,7 +68,11 @@ header p{
     font-weight: 700;
 }
 .close{
-    transform: translateX(210px);
+    transform: translateX(270px);
+    top: 1px;
+    margin: 0;
+    padding: 0;
     font-size: 20px;
     cursor: pointer;
+
 }
