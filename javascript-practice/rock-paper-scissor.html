@@ -2,20 +2,47 @@
 <html>
   <head>
     <title>Rock Paper Scissors</title>
+
+    <style>
+
+      body{
+        background-color: rgb(24,24,24);
+        color: white;
+        font-family: Arial;
+      }
+
+      .title{
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      .btn-icon{
+        height: 50px;
+      }
+
+      .move-btn{
+        border: 3px solid white;
+        width: 120px;
+        height: 120px;
+        background-color: transparent;
+        border-radius: 60px;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
-    <p>Rock Paper Scissors</p>
+    <p class="title">Rock Paper Scissors</p>
     <button onclick="
       playGame('rock');
-    ">Rock</button>
+    " class="move-btn"><img src="images/rock-emoji.png" alt="rock-emoji" class="btn-icon"></button>
 
     <button onclick="
       playGame('paper');
-    ">Paper</button>
+    " class="move-btn"><img src="images/paper-emoji.png" alt="paper-emoji" class="btn-icon"></button>
 
     <button onclick="
       playGame('scissors');
-    ">Scissors</button>
+    " class="move-btn"><img src="images/scissors-emoji.png" alt="scissors-emoji" class="btn-icon"></button>
 
     <p class="js-result"></p>
     <p class="js-moves"></p>
