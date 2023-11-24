@@ -26,7 +26,9 @@ function renderPage (){
          const todoObj = todoArray[i];
          const {name, todoDate} = todoObj;
          console.log(todoObj)
-         const html = `<div><p>${name}  ${todoDate} <button onclick = "deleteTodo()">Delete</button></p>`;
+         const html = `<div>${name}</div>
+        <div>${todoDate}</div> 
+        <button class= "todo-delete-btn" onclick = "deleteTodo()">Delete</button>`;
          todoHTML = todoHTML + html;
      }
  

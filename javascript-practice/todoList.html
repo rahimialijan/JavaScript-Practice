@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
     <title>Todo List</title>
+    <link rel="stylesheet" href="styles/todoList.css">
 </head>
 <body>
 
     <h3>Todo List</h3>
     <form>
-        <div>
-            <input type="text" name="Name" class="name-input">
-            <input type="date" name="Date" class="date-input">
+        <div class="input-group">
+            <input type="text" name="Name" class="name-input input">
+            <input type="date" name="Date" class="date-input input">
             <button class="todo-btn" onclick="addTodo(event)">Add</button>
         </div>
     </form>
     
-    <div class="js-todo-list"></div>
+    <div class="js-todo-list todo-list"></div>
     <script src="scriptes/todoList.js"></script>
 </body>
 </html>

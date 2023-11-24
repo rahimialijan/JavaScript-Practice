@@ -1,0 +1,35 @@
+.input-group,
+.todo-list{
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;
+}
+
+.input-group{
+    margin-bottom: 10px;
+}
+
+.input{
+    font-size: 15px;
+    padding: 8px;
+}
+
+.todo-btn{
+    background-color: green;
+    font-size: 15px;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+}
+
+.todo-delete-btn{
+    background-color: darkred;
+    font-size: 15px;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none; 
+}
