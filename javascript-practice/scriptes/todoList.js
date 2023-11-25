@@ -21,25 +21,26 @@ function addTodo(event){
 function renderPage (){
     // console.log(todoArray)
      let todoHTML = '';
- 
-     for (let i=0; i<todoArray.length; i++){
-         const todoObj = todoArray[i];
-         const {name, todoDate} = todoObj;
-         console.log(todoObj)
+
+     todoArray.forEach((value)=>{
+         const {name, todoDate} = value;
          const html = `<div>${name}</div>
         <div>${todoDate}</div> 
         <button class= "todo-delete-btn" onclick = "deleteTodo()">Delete</button>`;
          todoHTML = todoHTML + html;
-     }
- 
+     })
      document.querySelector('.js-todo-list').innerHTML = todoHTML;
  };
 
 
  function deleteTodo(){
+
+    todoArray.forEach((index)=>{
+        todoArray.splice({index}, 1)
+    })
+    /*
     for (let i = 0; i<todoArray.length; i++){
         todoArray.splice({i}, 1)
-    }
-
+    }*/
     renderPage()
  }
