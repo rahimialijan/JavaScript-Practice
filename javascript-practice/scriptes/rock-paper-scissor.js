@@ -8,18 +8,23 @@ let score = JSON.parse(localStorage.getItem('score')) || {
 
     let isAutoPlaying = false;
     let intervalId;
-    function autoPlay(){
-      if (!isAutoPlaying){
-          intervalId = setInterval(function(){
-          const playerMove = pickComputerMove();
-          playGame(playerMove)
-          },1000)
-          isAutoPlaying = true;
-      }else{
-        clearInterval(intervalId)
-        isAutoPlaying = false;
-      }    
-    }
+
+    document.querySelector('.autoplay-btn').addEventListener('click', ()=>{
+      function autoPlay(){
+        if (!isAutoPlaying){
+            intervalId = setInterval(function(){
+            const playerMove = pickComputerMove();
+            playGame(playerMove)
+            },1000)
+            isAutoPlaying = true;
+        }else{
+          clearInterval(intervalId)
+          isAutoPlaying = false;
+        }    
+      } 
+      autoPlay()
+    })
+    
 
 
   function playGame(playerMove) {
@@ -75,6 +80,26 @@ let score = JSON.parse(localStorage.getItem('score')) || {
   <img src="images/${computerMove}-emoji.png" alt="" class="btn-icon">
   Computer`;
   }
+
+  ///
+  document.querySelector('.rock-btn').addEventListener('click', ()=>{
+    playGame('rock');
+  })
+
+  document.querySelector('.paper-btn').addEventListener('click', ()=>{
+    playGame('paper');
+  })
+  document.querySelector('.scissor-btn').addEventListener('click', ()=>{
+    playGame('scissor');
+  })
+
+  document.querySelector('.reset-score-btn').addEventListener('click', ()=>{
+    score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updateScoreElement()
+  })
 
   function updateScoreElement(){
     document.querySelector('.js-score')
