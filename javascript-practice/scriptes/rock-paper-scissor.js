@@ -90,7 +90,7 @@ let score = JSON.parse(localStorage.getItem('score')) || {
     playGame('paper');
   })
   document.querySelector('.scissor-btn').addEventListener('click', ()=>{
-    playGame('scissor');
+    playGame('scissors');
   })
 
   document.querySelector('.reset-score-btn').addEventListener('click', ()=>{
@@ -101,6 +101,23 @@ let score = JSON.parse(localStorage.getItem('score')) || {
       updateScoreElement()
   })
 
+  document.addEventListener('keydown', (event)=>{
+    if (event.key === 'r'){
+      playGame('rock');
+    }
+  })
+
+  document.addEventListener('keydown', (event)=>{
+    if (event.key === 'p'){
+      playGame('paper');
+    }
+  })
+   
+  document.addEventListener('keydown', (event)=>{
+    if (event.key === 's'){
+      playGame('scissors');
+    }
+  })
   function updateScoreElement(){
     document.querySelector('.js-score')
     .innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
