@@ -24,8 +24,6 @@ let score = JSON.parse(localStorage.getItem('score')) || {
       } 
       autoPlay()
     })
-    
-
 
   function playGame(playerMove) {
     const computerMove = pickComputerMove();
@@ -101,23 +99,16 @@ let score = JSON.parse(localStorage.getItem('score')) || {
       updateScoreElement()
   })
 
-  document.addEventListener('keydown', (event)=>{
+  document.body.addEventListener('keydown', ()=>{
     if (event.key === 'r'){
       playGame('rock');
-    }
-  })
-
-  document.addEventListener('keydown', (event)=>{
-    if (event.key === 'p'){
+    } else if (event.key === 'p'){
       playGame('paper');
-    }
-  })
-   
-  document.addEventListener('keydown', (event)=>{
-    if (event.key === 's'){
+    } else if (event.key === 's'){
       playGame('scissors');
     }
   })
+
   function updateScoreElement(){
     document.querySelector('.js-score')
     .innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
